@@ -1,0 +1,55 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D7Y0000001W47" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"TestJulo","fallback":"true","orgId":"00D7Y0000001W47","ts":""}'>
+<input type=hidden name="oid" value="00D7Y0000001W47">
+<input type=hidden name="retURL" value="http://google.com">
+
+<input type="hidden" name="debug" value=1>                              
+<input type="hidden" name="debugEmail" value="stanislav.konopasek@enehano.cz">                                
+
+
+<label for="first_name">Křestní jméno</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+<label for="last_name">Příjmení</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="email">E-mail</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="phone">Telefon</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+Produkt:<input  id="00NQI0000088QiJ" maxlength="200" name="00NQI0000088QiJ" size="20" type="text" /><br>
+
+Preferovaná pobočka:<select  id="00NQI000006Yg4H" name="00NQI000006Yg4H" title="Preferovaná pobočka"><option value="">--Žádný--</option><option value="pha">Praha</option>
+<option value="zlin">Zlín</option>
+<option value="brno">Brno</option>
+<option value="ost">Ostrava</option>
+<option value="hk">Hradec Králové</option>
+<option value="cb">České Budějovice</option>
+<option value="plzen">Plzeň</option>
+<option value="lib">Liberec</option>
+<option value="olm">Olomouc</option>
+</select><br>
+
+<label for="description">Popis</label><textarea name="description"></textarea><br>
+
+Souhlas se zpracováním osobních údajů:<input  id="00N7Y00000MIZax" name="00N7Y00000MIZax" type="checkbox" value="1" /><br>
+
+<div class="g-recaptcha" data-sitekey="6Lfu-iwqAAAAANXc3nLFMxsVOitukrqWiwkAUmnx"></div><br>
+<input type="submit" name="submit">
+
+</form>
