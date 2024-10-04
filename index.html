@@ -16,12 +16,14 @@
 
 <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D7Y0000001W47" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"TrinityCaptchaNew","fallback":"true","orgId":"00D7Y0000001W47","ts":""}'>
+<input type=hidden name='captcha_settings' value='{"keyname":"NewRecaptcha","fallback":"true","orgId":"00D7Y0000001W47","ts":""}'>
 <input type=hidden name="oid" value="00D7Y0000001W47">
 <input type=hidden name="retURL" value="http://google.com">
- 
-<input type="hidden" name="debug" value=1>                              
-<input type="hidden" name="debugEmail" value="skonopasek@mediso.cz">   
+
+
+<input type="hidden" name="debug" value=1>                             
+<input type="hidden" name="debugEmail" value="skonopasek@mediso.cz">    
+
 
 <label for="first_name">Křestní jméno</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
@@ -33,7 +35,7 @@
 
 Souhlas se zpracováním osobních údajů:<input  id="00N7Y00000MIZax" name="00N7Y00000MIZax" type="checkbox" value="1" /><br>
 
-<div class="g-recaptcha" data-sitekey="6Ld9y5UUAAAAAFNSJDdjgu_rJSbjsF_RQGxMxEqo"></div><br>
+<div class="g-recaptcha" data-sitekey="6LeRolcqAAAAADx4tYGMzm2POlPAgOdDtGrJFXBt"></div><br>
 <input type="submit" name="submit">
 
 </form>
